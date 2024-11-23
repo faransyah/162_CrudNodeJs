@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
-const todosRoutes = require('./routes/todo.js'); // Mengimpor file route untuk todos
-const port = 3002; // Menentukan port 3002 untuk server
+const todosRoutes = require('./routes/tododb.js'); // Mengimpor file route untuk todos
+require('dotenv').config();
+const port = process.env.PORT;
 
 // Middleware untuk parsing JSON
 app.use(express.json());
